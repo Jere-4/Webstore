@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tuotekategoriat</title>
+</head>
+<body>
+
+<h1>Tuotekategoriat</h1>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nimi</th>
+        <th>Kuvaus</th>
+    </tr>
+
+    <tr th:each="category : ${categories}">
+        <td th:text="${category.id}"></td>
+        <td th:text="${category.name}"></td>
+        <td th:text="${category.description}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
